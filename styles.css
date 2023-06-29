@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    max-width: 80%;
+}
+
+/* header styles */
+
+header {
+    display: flex;
+    gap: 30px;
+    height: 190px;
+
+}
+
+header .left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+header .name {
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+header .name .alt {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: bottom;
+    font-size: .666rem;
+}
+
+header .right-column {
+    flex: 2;
+    line-height: 200%;
+    align-self: flex-end;
+
+}
+
+/* category buttons */
+.category-layout {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.category-layout ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.category {
+    justify-self: stretch;
+    border: 1px solid black;
+    height: 50px;
+}
+
+.category a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .5rem;
+}
+
+.category a:hover {
+    transition: all .5s ease-out;
+    color: white;
+    background-color: black;
+}
+
+/*portfolio*/
+#portfolio {
+    margin: 0 auto;
+}
+
+/* post style */
+.post {
+    width: 30%;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.post .overlay {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.post .overlay * {
+    flex: 1;
+}
+
+.post .overlay:hover {
+    transition: opacity .5s ease-out;
+    opacity: 1;
+    border: 1px solid black;
+    background-color: #e4e4e4d5;
+}
+
+.post .overlay .name,
+.post .overlay .description {
+    margin: 0 20px;
+    width: auto;
+}
+
+.post .overlay .name {
+    font-size: 1rem;
+}
+
+.post .overlay .description {
+    font-size: .66rem;
+    font-style: italic;
+}
+
+.post img {
+    z-index: 10;
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
