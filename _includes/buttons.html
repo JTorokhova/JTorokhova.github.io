@@ -1,0 +1,39 @@
+<nav class="category-layout">
+    <ul>
+        {% if include.category %}
+        <li class="category"><a href="/portfolio">Featured Works</a></li>
+        {% else %}
+        <li class="category selected"><a href="/portfolio">Featured Works</a></li>
+        {% endif %}
+
+        {% if include.category=="graphic" %}
+        <li class="category selected"><a href="/portfolio/graphic">Graphic Design</a></li>
+        {% else %}
+        <li class="category"><a href="/portfolio/graphic">Graphic Design</a></li>
+        {% endif %}
+
+        {% if include.category=="illustrations" %}
+        <li class="category selected"><a href="/portfolio/illustrations">Illustrations</a></li>
+        {% else %}
+        <li class="category"><a href="/portfolio/illustrations">Illustrations</a></li>
+        {% endif %}
+
+        {% if include.category=="marketing" %}
+        <li class="category selected"><a href="/portfolio/marketing">Marketing</a></li>
+        {% else %}
+        <li class="category"><a href="/portfolio/marketing">Marketing</a></li>
+        {% endif %}
+
+        {% if include.category=="products" %}
+        <li class="category selected"><a href="/portfolio/products">Printed Products</a></li>
+        {% else %}
+        <li class="category"><a href="/portfolio/products">Printed Products</a></li>
+        {% endif %}
+
+        {% if include.category=="other" %}
+        <li class="category selected"><a href="/portfolio/other">Other</a></li>
+        {% else %}
+        <li class="category"><a href="/portfolio/other">Other</a></li>
+        {% endif %}
+    </ul>
+</nav>

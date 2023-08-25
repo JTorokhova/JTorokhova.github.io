@@ -9,8 +9,6 @@
     <title>Portfolio | Julia Torokhova</title>
 
     <link rel="stylesheet" href="/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
-    <script src="/portfolio.js" defer></script>
 </head>
 
 <body>
@@ -18,9 +16,9 @@
     <main>
         {% include buttons.html category=page.category %}
 
-        <div id="portfolio">
-            {% for post in site.categories[page.category] %}
-            {% include post.html post=post %}
+        <div id="featured">
+            {% for post in site.tags["featured"]%}
+            {% include featured.html post=post %}
             {% endfor %}
         </div>
     </main>

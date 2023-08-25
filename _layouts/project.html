@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{page.title}}</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    {% include header.html %}
+
+    <div class="project">
+        <aside class="sidebar">
+            <img src="{{ page.sidebar-img }}" />
+            <h4 class="details">details</h4>
+            <div>
+                <h4>status</h4>
+                <p>{{ page.status }}</p>
+            </div>
+            <div>
+                <h4>genre</h4>
+                <p>{{ page.genre }}</p>
+            </div>
+            <div>
+                <h4>programs</h4>
+                <p>{{ page.programs }}</p>
+            </div>
+            <div>
+                <h4>skills</h4>
+                <p>{{ page.skills }}</p>
+            </div>
+            <div>
+                <h4>completed</h4>
+                <p>{{ page.completed }}</p>
+            </div>
+        </aside>
+
+        <main>
+            <h2>{{page.title}}</h2>
+            <p class="subtitle">{{page.subtitle}}</p>
+            <p class="description">{{page.description}}</p>
+            {{content}}
+        </main>
+    </div>
+</body>
+
+</html>

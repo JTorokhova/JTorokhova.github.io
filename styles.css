@@ -4,12 +4,16 @@ body {
     max-width: 80%;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* header styles */
 
 header {
     display: flex;
     gap: 30px;
-    height: 190px;
+    height: 200px;
 
 }
 
@@ -90,10 +94,56 @@ header .right-column {
     background-color: black;
 }
 
+.category.selected a {
+ text-decoration: underline;
+}
+
 /*portfolio*/
 #portfolio {
     margin: 0 auto;
 }
+
+/* featured style */
+.featured {
+    justify-self: stretch;
+    border: 1px solid black;
+    height: 300px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.featured .overlay {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .5rem;
+    transform: translateX(-100%);
+    transition: transform .75s ease-in-out;
+    display: flex;
+    overflow: hidden;
+}
+
+.featured .overlay .name {
+    flex-grow: 2;
+}
+
+.featured .overlay .arrow {
+    flex-grow: 1;
+}
+
+.featured:hover .overlay {
+    transform: translateX(0);
+}
+
 
 /* post style */
 .post {
@@ -136,11 +186,13 @@ header .right-column {
 
 .post .overlay .name {
     font-size: 1rem;
+    text-transform: lowercase;
 }
 
 .post .overlay .description {
-    font-size: .66rem;
+    font-size: .75rem;
     font-style: italic;
+    line-height: 200%;
 }
 
 .post img {
@@ -149,4 +201,73 @@ header .right-column {
     height: auto;
     width: auto;
     max-width: 100%;
+}
+
+/* projects */
+
+.project {
+    display: flex;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+/* sidebar */
+
+.project .sidebar {
+    flex: 1;
+    min-width: 0;
+}
+
+.project .sidebar img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 0;
+}
+
+.project .sidebar .details {
+    justify-self: stretch;
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .5rem;
+    margin: 0;
+}
+
+.project .sidebar div {
+    display: flex;
+    margin: 10px;
+}
+
+.project .sidebar div h4 {
+    flex: 1;
+    font-weight: bold;
+    margin: 0;
+}
+
+.project .sidebar div p {
+    flex: 2;
+    margin: 0;
+}
+
+.project main {
+    flex: 2;
+}
+
+.project main h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: .5rem;
+    text-align: center;
 }
