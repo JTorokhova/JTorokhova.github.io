@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{page.title}}</title>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    {% include header.html %}
+
+    <div class="project">
+        <aside class="sidebar">
+            <p>{{ page.designation }}</p>
+        </aside>
+
+        <main>
+            <h2>{{page.title}}</h2>
+            <p class="subtitle">{{page.subtitle}}</p>
+            <p class="description">{{page.description}}</p>
+            {{content}}
+        </main>
+    </div>
+</body>
+
+</html>
