@@ -26,7 +26,7 @@ header .left-column {
 }
 
 header .name {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: normal;
     margin: 0;
 }
@@ -95,7 +95,7 @@ header .right-column {
 }
 
 .category.selected a {
- text-decoration: underline;
+    text-decoration: underline;
 }
 
 /*portfolio*/
@@ -211,6 +211,54 @@ header .right-column {
     gap: 30px;
 }
 
+.project main h4 {
+    justify-self: stretch;
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.project main {
+    flex: 2;
+    line-height: 200%;
+}
+
+.project main h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: .5rem;
+    text-align: center;
+}
+
+.project .subtitle {
+    font-style: italic;
+    line-height: 300%;
+    margin: 50px
+}
+
+.project main h3 {
+    font-style: italic;
+    font-size: .8rem;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
+    margin: 0;
+}
+
 /* sidebar */
 
 .project .sidebar {
@@ -226,7 +274,7 @@ header .right-column {
     margin: 0;
 }
 
-.project .sidebar .details {
+.project .sidebar h4 {
     justify-self: stretch;
     border: 1px solid black;
     height: 50px;
@@ -241,33 +289,26 @@ header .right-column {
     font-weight: bold;
     font-style: italic;
     letter-spacing: .5rem;
-    margin: 0;
 }
 
-.project .sidebar div {
-    display: flex;
-    margin: 10px;
-}
-
-.project .sidebar div h4 {
+.project .sidebar div p,
+dt {
     flex: 1;
     font-weight: bold;
-    margin: 0;
+    float: left;
+    width: 100px;
+    text-align: left;
+    margin-left: 10px;
+
 }
 
-.project .sidebar div p {
-    flex: 2;
-    margin: 0;
+.project .sidebar div p,
+dt:after {
+    content: "";
 }
 
-.project main {
-    flex: 2;
-}
-
-.project main h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: .5rem;
-    text-align: center;
+.project .sidebar div p,
+dd {
+    margin: 0 0 0 33%;
+    margin-bottom: 20px;
 }
